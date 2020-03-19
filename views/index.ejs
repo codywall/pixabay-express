@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pixabay Search (Express Version) </title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    </head>
+    <body>
+        <h1> Pixabay Search (Express Version) </h1>
+        
+        <form action="/results" method="GET">
+            <div id="input__wrapper">
+                <input id="searchQuery" name="keyword" type="text" placeholder="Enter a keyword...">
+                <select name="orientation" id="orientation">
+                    <option value="all">Select Orientation</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </select>
+                <button id="submit">Search</button>
+            </div>
+        </form>
+
+        <div id="imgs__wrapper">
+            <div class="img__wrapper">
+                <p class="imgs__caption">Likes: <%= images.hits[0].likes %></p>
+                <img class="imgs" src='<%= images.hits[0].largeImageURL %>' width='250'>
+            </div>
+            <div class="img__wrapper">
+                <p class="imgs__caption">Likes: <%= images.hits[1].likes %></p>
+                <img class="imgs" src='<%= images.hits[1].largeImageURL %>' width='250'>
+            </div>
+            <div class="img__wrapper">
+                <p class="imgs__caption">Likes: <%= images.hits[2].likes %></p>
+                <img class="imgs" src='<%= images.hits[2].largeImageURL %>' width='250'>
+            </div>
+            <div class="img__wrapper">
+                <p class="imgs__caption">Likes: <%= images.hits[3].likes %></p>
+                <img class="imgs" src='<%= images.hits[3].largeImageURL %>' width='250'>
+            </div>
+        </div>
+        
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>

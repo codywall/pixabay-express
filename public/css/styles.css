@@ -1,0 +1,38 @@
+body {
+    background-color: whitesmoke;
+}
+
+#input__wrapper {
+    padding: 20px;
+}
+
+#imgs__wrapper {
+    display: flex; 
+}
+
+.img__wrapper {
+    padding: 5px;
+    margin: 10px;
+    width: 40vw;
+    max-height: 40vw;
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+.imgs {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: roboto, sans-serif;
+    font-size: 3em;
+    margin-left: 10px;
+}
+
+p {
+    padding: 0;
+    margin: 2px;
+    font-family: roboto, sans-serif;
+    font-size: .75em;
+}
