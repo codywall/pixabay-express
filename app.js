@@ -25,7 +25,7 @@ app.get("/", async function (req, res) {
     let orientation = 'all';
     let parsedData = await getImages(keyword, orientation);
     console.dir("parsedData: " + parsedData); //displays content of the object
-    res.render("index", {"images":parsedData});
+    res.render("index.ejs", {"images":parsedData});
             
 }); //root route
 
@@ -37,7 +37,7 @@ app.get("/results", async function(req, res){
     let orientation = req.query.orientation
     let parsedData = await getImages(keyword, orientation);
 
-    res.render("results", {"images":parsedData});
+    res.render("results.ejs", {"images":parsedData});
     
 });//results route
 
